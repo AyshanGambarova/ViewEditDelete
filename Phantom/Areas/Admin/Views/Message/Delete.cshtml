@@ -1,0 +1,14 @@
+﻿@model Messages
+<div class="row">
+    <div class="col-md-8">
+        <h2 class="text-danger">Ismarıcı silmək istədiyinizə əminsiznizmi?</h2>
+        <h3>Name: <b>@Model.Name</b></h3>
+        <h4>Email: <b>@Model.Email</b></h4>
+        <div class="mb-5">
+            @Model.Message
+        </div>
+        <h6>Date: <b>@Model.Date</b></h6>
+        <a asp-action="PermanentlyDelete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

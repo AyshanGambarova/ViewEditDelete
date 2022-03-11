@@ -1,0 +1,29 @@
+﻿@model HomeViewModel
+<div id="main">
+    <div class="inner">
+        <header>
+            <h1>
+                @Model.Banner.Title
+            </h1>
+            <p>@Model.Banner.Subitle</p>
+        </header>
+        <section class="tiles">
+            @foreach (Blog item in Model.Blogs)
+            {
+
+                <article class="style1">
+                    <span class="image">
+                        <img src="@item.Img" />
+                    </span>
+                    <a href="/blog/info/@item.Id">
+                        <h2>@item.Name</h2>
+                        <div class="content">
+                            <p>@item.Title</p>
+                        </div>
+                    </a>
+                </article>
+            }
+            
+        </section>
+    </div>
+</div>

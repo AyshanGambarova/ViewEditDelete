@@ -1,0 +1,21 @@
+﻿@model Blog
+<div class="row">
+    <div class="col-md-8">
+        <h2 class="text-danger">Postu silmək istədiyinizə əminsiznizmi?</h2>
+        @if (String.IsNullOrEmpty(Model.Img))
+        {
+            <img src="~/images/avatar.png" style="width:200px" class="rounded d-block mb-3" />
+        }
+        else
+        {
+            <img src="@Model.Img" style="width:200px" class="rounded d-block mb-3" />
+        }
+        <h4>Name: <b>@Model.Name</b></h4>
+        <h4>Title: <b>@Model.Title</b></h4>
+        <div class="mb-5">
+            @Model.Text
+        </div>
+        <a asp-action="PermanentlyDelete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+        <a asp-action="Index" class="btn btn-primary">Go Back</a>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@model Messages
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Add Testimonial</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="Add" method="POST">
+            <div class="row">
+                <div class="col-6 mb-4">
+                    <label asp-for="Name"></label>
+                    <input type="text" asp-for="Name" class="form-control" name="Name" placeholder="Name" required="">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="col-6 mb-4">
+                    <label asp-for="Email"></label>
+                    <input type="email" asp-for="Email" class="form-control" name="Email" placeholder="Email" required="">
+                    <span asp-validation-for="Email"></span>
+                </div>
+                <div class="col-12 mb-4">
+                    <label asp-for="Message"></label>
+                    <textarea class="form-control" asp-for="Message" name="Message" id="" cols="10" rows="10" required=""></textarea>
+                    <span asp-validation-for="Message"></span>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

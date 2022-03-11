@@ -1,0 +1,35 @@
+﻿@model Blog
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Add Testimonial</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="Add" method="POST">
+            <div class="row">
+                <div class="col-6 mb-4">
+                    <label asp-for="Name"></label>
+                    <input type="text"asp-for="Name" class="form-control" name="Name" placeholder="Name" required="">
+                    <span asp-validation-for="Name"></span>
+                </div>
+                <div class="col-6 mb-4">
+                    <label asp-for="Title"></label>
+                    <input type="text" asp-for="Title" class="form-control" name="Title" placeholder="Title" required="">
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <div class="col-12 mb-4">
+                    <label asp-for="Img"></label>
+                    <input type="text" asp-for="Img" class="form-control" name="Img" placeholder="Image" required="">
+                    <span asp-validation-for="Img"></span>
+                </div>
+                <div class="col-12 mb-4">
+                    <label asp-for="Text"></label>
+                    <textarea class="form-control" asp-for="Text" name="Text" id="" cols="10" rows="10" required=""></textarea>
+                    <span asp-validation-for="Text"></span>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
